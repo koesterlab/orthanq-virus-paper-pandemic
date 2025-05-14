@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        vega-chart.vega-embed {
+          width: 100%;
+          display: flex;
+        }
+        vega-chart.vega-embed details,
+        vega-chart.vega-embed details summary {
+          position: relative;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Chart</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+            
+  </head>
+  <body>
+    <div id="vega-chart"></div>
+    <script type="text/javascript">
+
+{
+    const spec = {"$schema":"https://vega.github.io/schema/vega-lite/v5.json","datasets":{"densities":[{"density":0.9645148581107014,"solution_number":0},{"density":0.027236014663486765,"solution_number":1},{"density":0.002989089201698859,"solution_number":2},{"density":0.00274199610646,"solution_number":3},{"density":0.0017410507993675702,"solution_number":4},{"density":0.0005314183639468102,"solution_number":5},{"density":0.00023916110446635592,"solution_number":6},{"density":6.3996617546777025e-6,"solution_number":7},{"density":1.1210914312290737e-8,"solution_number":8},{"density":7.75007806886267e-10,"solution_number":9}],"haplotype_fractions":[{"haplotype":"KP.2.3","fraction":0.375,"solution_number":0},{"haplotype":"KP.3.1.1","fraction":0.5729166666666666,"solution_number":0},{"haplotype":"LP.1","fraction":0.05208333333333337,"solution_number":0},{"haplotype":"KP.2.3","fraction":0.375,"solution_number":1},{"haplotype":"KP.3.1.1","fraction":0.5989583333333334,"solution_number":1},{"haplotype":"LP.1","fraction":0.02604166666666663,"solution_number":1},{"haplotype":"KP.2.3","fraction":0.4375,"solution_number":2},{"haplotype":"KP.3.1.1","fraction":0.5390625,"solution_number":2},{"haplotype":"LP.1","fraction":0.0234375,"solution_number":2},{"haplotype":"KP.2.3","fraction":0.4375,"solution_number":3},{"haplotype":"KP.3.1.1","fraction":0.515625,"solution_number":3},{"haplotype":"LP.1","fraction":0.046875,"solution_number":3},{"haplotype":"KP.2.3","fraction":0.375,"solution_number":4},{"haplotype":"KP.3.1.1","fraction":0.546875,"solution_number":4},{"haplotype":"LP.1","fraction":0.078125,"solution_number":4},{"haplotype":"KP.2.3","fraction":0.3375,"solution_number":5},{"haplotype":"KP.3.1.1","fraction":0.5796874999999999,"solution_number":5},{"haplotype":"LP.1","fraction":0.08281250000000007,"solution_number":5},{"haplotype":"KP.2.3","fraction":0.3375,"solution_number":6},{"haplotype":"KP.3.1.1","fraction":0.6072916666666666,"solution_number":6},{"haplotype":"LP.1","fraction":0.055208333333333415,"solution_number":6},{"haplotype":"KP.2.3","fraction":0.3375,"solution_number":7},{"haplotype":"KP.3.1.1","fraction":0.6348958333333333,"solution_number":7},{"haplotype":"LP.1","fraction":0.027604166666666652,"solution_number":7},{"haplotype":"KP.2.3","fraction":0.4375,"solution_number":8},{"haplotype":"KP.3.1.1","fraction":0.4921875,"solution_number":8},{"haplotype":"LP.1","fraction":0.0703125,"solution_number":8},{"haplotype":"KP.2.3","fraction":0.5,"solution_number":9},{"haplotype":"KP.3.1.1","fraction":0.4791666666666667,"solution_number":9},{"haplotype":"LP.1","fraction":0.02083333333333326,"solution_number":9}]},"vconcat":[{"data":{"name":"densities"},"mark":{"type":"line","point":true,"tooltip":true},"encoding":{"x":{"field":"solution_number","type":"nominal","axis":{"title":null,"labels":false}},"y":{"field":"density","type":"quantitative","scale":{"type":"log"},"axis":{"title":"log(posterior density)"}},"color":{"value":"black"}}},{"data":{"name":"haplotype_fractions"},"mark":{"type":"bar","tooltip":true},"encoding":{"x":{"field":"solution_number","type":"ordinal","axis":{"title":"composition","labels":false}},"y":{"field":"fraction","type":"quantitative","aggregate":"sum","axis":{"title":"fraction"}},"color":{"field":"haplotype","scale":{"scheme":"category20"}}}}]};
+    const opts = {"renderer":"svg"}
+    vegaEmbed('#vega-chart', spec, opts).catch(console.error);
+}
+
+    </script>
+  </body>
+</html>
+        

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        vega-chart.vega-embed {
+          width: 100%;
+          display: flex;
+        }
+        vega-chart.vega-embed details,
+        vega-chart.vega-embed details summary {
+          position: relative;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Chart</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+            
+  </head>
+  <body>
+    <div id="vega-chart"></div>
+    <script type="text/javascript">
+
+{
+    const spec = {"$schema":"https://vega.github.io/schema/vega-lite/v5.json","datasets":{"densities":[{"density":0.07412360494786194,"solution_number":0},{"density":0.07412360494786194,"solution_number":1},{"density":0.07412360494786194,"solution_number":2},{"density":0.07412360494786194,"solution_number":3},{"density":0.07412360494786194,"solution_number":4},{"density":0.07412360494786194,"solution_number":5},{"density":0.028201722538876706,"solution_number":6},{"density":0.028201722538876706,"solution_number":7},{"density":0.028201722538876706,"solution_number":8},{"density":0.028201722538876706,"solution_number":9}],"haplotype_fractions":[{"haplotype":"KP.2","fraction":0.11249999999999998,"solution_number":0},{"haplotype":"KP.3","fraction":0.05546875,"solution_number":0},{"haplotype":"KP.3.1","fraction":0.2080078125,"solution_number":0},{"haplotype":"KP.3.1.1","fraction":0.6240234375,"solution_number":0},{"haplotype":"KP.2.10","fraction":0.11249999999999998,"solution_number":1},{"haplotype":"KP.3","fraction":0.05546875,"solution_number":1},{"haplotype":"KP.3.1","fraction":0.2080078125,"solution_number":1},{"haplotype":"KP.3.1.1","fraction":0.6240234375,"solution_number":1},{"haplotype":"KP.2.14","fraction":0.11249999999999998,"solution_number":2},{"haplotype":"KP.3","fraction":0.05546875,"solution_number":2},{"haplotype":"KP.3.1","fraction":0.2080078125,"solution_number":2},{"haplotype":"KP.3.1.1","fraction":0.6240234375,"solution_number":2},{"haplotype":"KP.2","fraction":0.11249999999999998,"solution_number":3},{"haplotype":"KP.3","fraction":0.05546875,"solution_number":3},{"haplotype":"KP.3.1.1","fraction":0.6240234375,"solution_number":3},{"haplotype":"KP.3.1.3","fraction":0.2080078125,"solution_number":3},{"haplotype":"KP.2.10","fraction":0.11249999999999998,"solution_number":4},{"haplotype":"KP.3","fraction":0.05546875,"solution_number":4},{"haplotype":"KP.3.1.1","fraction":0.6240234375,"solution_number":4},{"haplotype":"KP.3.1.3","fraction":0.2080078125,"solution_number":4},{"haplotype":"KP.2.14","fraction":0.11249999999999998,"solution_number":5},{"haplotype":"KP.3","fraction":0.05546875,"solution_number":5},{"haplotype":"KP.3.1.1","fraction":0.6240234375,"solution_number":5},{"haplotype":"KP.3.1.3","fraction":0.2080078125,"solution_number":5},{"haplotype":"KP.2","fraction":0.11249999999999998,"solution_number":6},{"haplotype":"KP.3","fraction":0.05546875,"solution_number":6},{"haplotype":"KP.3.1","fraction":0.260009765625,"solution_number":6},{"haplotype":"KP.3.1.1","fraction":0.572021484375,"solution_number":6},{"haplotype":"KP.2.10","fraction":0.11249999999999998,"solution_number":7},{"haplotype":"KP.3","fraction":0.05546875,"solution_number":7},{"haplotype":"KP.3.1","fraction":0.260009765625,"solution_number":7},{"haplotype":"KP.3.1.1","fraction":0.572021484375,"solution_number":7},{"haplotype":"KP.2.14","fraction":0.11249999999999998,"solution_number":8},{"haplotype":"KP.3","fraction":0.05546875,"solution_number":8},{"haplotype":"KP.3.1","fraction":0.260009765625,"solution_number":8},{"haplotype":"KP.3.1.1","fraction":0.572021484375,"solution_number":8},{"haplotype":"KP.2","fraction":0.11249999999999998,"solution_number":9},{"haplotype":"KP.3","fraction":0.05546875,"solution_number":9},{"haplotype":"KP.3.1.1","fraction":0.572021484375,"solution_number":9},{"haplotype":"KP.3.1.3","fraction":0.260009765625,"solution_number":9}]},"vconcat":[{"data":{"name":"densities"},"mark":{"type":"line","point":true,"tooltip":true},"encoding":{"x":{"field":"solution_number","type":"nominal","axis":{"title":null,"labels":false}},"y":{"field":"density","type":"quantitative","scale":{"type":"log"},"axis":{"title":"log(posterior density)"}},"color":{"value":"black"}}},{"data":{"name":"haplotype_fractions"},"mark":{"type":"bar","tooltip":true},"encoding":{"x":{"field":"solution_number","type":"ordinal","axis":{"title":"composition","labels":false}},"y":{"field":"fraction","type":"quantitative","aggregate":"sum","axis":{"title":"fraction"}},"color":{"field":"haplotype","scale":{"scheme":"category20"}}}}]};
+    const opts = {"renderer":"svg"}
+    vegaEmbed('#vega-chart', spec, opts).catch(console.error);
+}
+
+    </script>
+  </body>
+</html>
+        

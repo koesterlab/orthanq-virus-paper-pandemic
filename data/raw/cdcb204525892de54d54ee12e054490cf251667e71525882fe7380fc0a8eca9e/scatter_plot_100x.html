@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"data": {"name": "data-5c97ce2fbbd219c6a9df65946aa68ec6"}, "mark": {"type": "point"}, "encoding": {"color": {"value": "black"}, "tooltip": [{"field": "Actual", "type": "quantitative"}, {"field": "Predicted", "type": "quantitative"}], "x": {"field": "Actual", "type": "quantitative"}, "y": {"field": "Predicted", "type": "quantitative"}}, "transform": [{"calculate": "random()", "as": "jitter"}]}, {"data": {"name": "data-296daff8005a16e03457b865011b703b"}, "mark": {"type": "line", "color": "red"}, "encoding": {"x": {"field": "Actual", "type": "quantitative"}, "y": {"field": "Predicted", "type": "quantitative"}}}], "height": 200, "width": 200, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-5c97ce2fbbd219c6a9df65946aa68ec6": [{"Actual": 0.1867219917012448, "Predicted": 0.1875}, {"Actual": 0.1203319502074688, "Predicted": 0.0994}, {"Actual": 0.6929460580912863, "Predicted": 0.6961}, {"Actual": 0.0, "Predicted": 0.0169}, {"Actual": 0.1717171717171717, "Predicted": 0.1125}, {"Actual": 0.2323232323232323, "Predicted": 0.208}, {"Actual": 0.595959595959596, "Predicted": 0.624}, {"Actual": 0.0, "Predicted": 0.0555}, {"Actual": 0.3943661971830986, "Predicted": 0.375}, {"Actual": 0.5492957746478874, "Predicted": 0.5729}, {"Actual": 0.056338028169014, "Predicted": 0.0521}, {"Actual": 0.0420711974110032, "Predicted": 0.0417}, {"Actual": 0.1877022653721682, "Predicted": 0.1997}, {"Actual": 0.7702265372168284, "Predicted": 0.7587}, {"Actual": 0.1409477521263669, "Predicted": 0.125}, {"Actual": 0.8298906439854192, "Predicted": 0.8032}, {"Actual": 0.0, "Predicted": 0.0717}, {"Actual": 0.1934210526315789, "Predicted": 0.2125}, {"Actual": 0.681140350877193, "Predicted": 0.5906}, {"Actual": 0.125438596491228, "Predicted": 0.1641}, {"Actual": 0.0, "Predicted": 0.032799999999999996}, {"Actual": 0.6264866602378656, "Predicted": 0.6375}, {"Actual": 0.0520732883317261, "Predicted": 0.0302}, {"Actual": 0.3214400514304082, "Predicted": 0.3323}, {"Actual": 0.0, "Predicted": 0.0}, {"Actual": 0.0286259541984732, "Predicted": 0.0625}, {"Actual": 0.0515267175572519, "Predicted": 0.0586}, {"Actual": 0.9198473282442748, "Predicted": 0.8606}, {"Actual": 0.0, "Predicted": 0.0183}, {"Actual": 0.5506512301013025, "Predicted": 0.5}, {"Actual": 0.2590448625180897, "Predicted": 0.2875}, {"Actual": 0.1903039073806078, "Predicted": 0.1948}, {"Actual": 0.0, "Predicted": 0.0177}, {"Actual": 0.3941717791411043, "Predicted": 0.4125}, {"Actual": 0.4263803680981595, "Predicted": 0.4406}, {"Actual": 0.1794478527607362, "Predicted": 0.1224}, {"Actual": 0.0, "Predicted": 0.0245}], "data-296daff8005a16e03457b865011b703b": [{"Actual": 0.0, "Predicted": 0.0}, {"Actual": 1.0, "Predicted": 1.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

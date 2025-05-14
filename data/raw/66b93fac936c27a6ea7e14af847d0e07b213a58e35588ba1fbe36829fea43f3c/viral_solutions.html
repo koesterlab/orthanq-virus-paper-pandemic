@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        vega-chart.vega-embed {
+          width: 100%;
+          display: flex;
+        }
+        vega-chart.vega-embed details,
+        vega-chart.vega-embed details summary {
+          position: relative;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Chart</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+            
+  </head>
+  <body>
+    <div id="vega-chart"></div>
+    <script type="text/javascript">
+
+{
+    const spec = {"$schema":"https://vega.github.io/schema/vega-lite/v5.json","datasets":{"densities":[{"density":1.0,"solution_number":0},{"density":2.3825156464807186e-22,"solution_number":1},{"density":1.3477706494939572e-40,"solution_number":2},{"density":2.4695050723174188e-42,"solution_number":3},{"density":7.479237773608864e-47,"solution_number":4},{"density":4.009462500597402e-47,"solution_number":5},{"density":8.646252119585159e-53,"solution_number":6},{"density":6.168139488509166e-59,"solution_number":7},{"density":1.7551103611089317e-59,"solution_number":8},{"density":1.2339337319460285e-59,"solution_number":9}],"haplotype_fractions":[{"haplotype":"AY.103","fraction":0.3375,"solution_number":0},{"haplotype":"AY.44","fraction":0.4484375,"solution_number":0},{"haplotype":"B","fraction":0.017838541666666662,"solution_number":0},{"haplotype":"B.1.617.2","fraction":0.19622395833333328,"solution_number":0},{"haplotype":"AY.103","fraction":0.4375,"solution_number":1},{"haplotype":"AY.44","fraction":0.421875,"solution_number":1},{"haplotype":"B","fraction":0.0234375,"solution_number":1},{"haplotype":"B.1.617.2","fraction":0.1171875,"solution_number":1},{"haplotype":"AY.103","fraction":0.4375,"solution_number":2},{"haplotype":"AY.44","fraction":0.41093750000000007,"solution_number":2},{"haplotype":"AY.5","fraction":0.025260416666666657,"solution_number":2},{"haplotype":"B","fraction":0.02105034722222221,"solution_number":2},{"haplotype":"B.1.617.2","fraction":0.10525173611111104,"solution_number":2},{"haplotype":"AY.103","fraction":0.375,"solution_number":3},{"haplotype":"AY.44","fraction":0.43437500000000007,"solution_number":3},{"haplotype":"B","fraction":0.031770833333333325,"solution_number":3},{"haplotype":"B.1.617.2","fraction":0.15885416666666663,"solution_number":3},{"haplotype":"AY.103","fraction":0.375,"solution_number":4},{"haplotype":"AY.44","fraction":0.46875,"solution_number":4},{"haplotype":"AY.5","fraction":0.026041666666666668,"solution_number":4},{"haplotype":"B","fraction":0.021701388888888895,"solution_number":4},{"haplotype":"B.1.617.2","fraction":0.10850694444444442,"solution_number":4},{"haplotype":"AY.103","fraction":0.375,"solution_number":5},{"haplotype":"AY.44","fraction":0.43437500000000007,"solution_number":5},{"haplotype":"AY.5","fraction":0.04765624999999998,"solution_number":5},{"haplotype":"B","fraction":0.023828124999999995,"solution_number":5},{"haplotype":"B.1.617.2","fraction":0.119140625,"solution_number":5},{"haplotype":"AY.103","fraction":0.375,"solution_number":6},{"haplotype":"AY.44","fraction":0.43437500000000007,"solution_number":6},{"haplotype":"AY.5","fraction":0.06354166666666665,"solution_number":6},{"haplotype":"B","fraction":0.021180555555555553,"solution_number":6},{"haplotype":"B.1.617.2","fraction":0.1059027777777778,"solution_number":6},{"haplotype":"AY.103","fraction":0.4375,"solution_number":7},{"haplotype":"AY.44","fraction":0.31093750000000003,"solution_number":7},{"haplotype":"AY.5","fraction":0.04192708333333331,"solution_number":7},{"haplotype":"B","fraction":0.017469618055555552,"solution_number":7},{"haplotype":"B.1.617.2","fraction":0.19216579861111105,"solution_number":7},{"haplotype":"AY.103","fraction":0.375,"solution_number":8},{"haplotype":"AY.44","fraction":0.46875,"solution_number":8},{"haplotype":"B","fraction":0.026041666666666668,"solution_number":8},{"haplotype":"B.1.617.2","fraction":0.13020833333333337,"solution_number":8},{"haplotype":"AY.103","fraction":0.375,"solution_number":9},{"haplotype":"AY.44","fraction":0.43437500000000007,"solution_number":9},{"haplotype":"AY.5","fraction":0.031770833333333325,"solution_number":9},{"haplotype":"B","fraction":0.026475694444444437,"solution_number":9},{"haplotype":"B.1.617.2","fraction":0.1323784722222222,"solution_number":9}]},"vconcat":[{"data":{"name":"densities"},"mark":{"type":"line","point":true,"tooltip":true},"encoding":{"x":{"field":"solution_number","type":"nominal","axis":{"title":null,"labels":false}},"y":{"field":"density","type":"quantitative","scale":{"type":"log"},"axis":{"title":"log(posterior density)"}},"color":{"value":"black"}}},{"data":{"name":"haplotype_fractions"},"mark":{"type":"bar","tooltip":true},"encoding":{"x":{"field":"solution_number","type":"ordinal","axis":{"title":"composition","labels":false}},"y":{"field":"fraction","type":"quantitative","aggregate":"sum","axis":{"title":"fraction"}},"color":{"field":"haplotype","scale":{"scheme":"category20"}}}}]};
+    const opts = {"renderer":"svg"}
+    vegaEmbed('#vega-chart', spec, opts).catch(console.error);
+}
+
+    </script>
+  </body>
+</html>
+        

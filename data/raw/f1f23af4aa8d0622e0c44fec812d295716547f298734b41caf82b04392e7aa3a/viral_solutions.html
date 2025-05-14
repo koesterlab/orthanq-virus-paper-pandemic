@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        vega-chart.vega-embed {
+          width: 100%;
+          display: flex;
+        }
+        vega-chart.vega-embed details,
+        vega-chart.vega-embed details summary {
+          position: relative;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Chart</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+            
+  </head>
+  <body>
+    <div id="vega-chart"></div>
+    <script type="text/javascript">
+
+{
+    const spec = {"$schema":"https://vega.github.io/schema/vega-lite/v5.json","datasets":{"densities":[{"density":0.82157608375108,"solution_number":0},{"density":0.17810899736169752,"solution_number":1},{"density":0.00023921162225616193,"solution_number":2},{"density":0.00005545053932747987,"solution_number":3},{"density":0.000020253921011342903,"solution_number":4},{"density":1.5074082332955232e-9,"solution_number":5},{"density":1.2970899232079222e-9,"solution_number":6},{"density":1.0931185518019096e-13,"solution_number":7},{"density":1.9945730399585957e-14,"solution_number":8},{"density":1.3825376801349123e-17,"solution_number":9}],"haplotype_fractions":[{"haplotype":"KP.2.2","fraction":0.041666666666666664,"solution_number":0},{"haplotype":"KP.2.3","fraction":0.1996527777777778,"solution_number":0},{"haplotype":"KP.3.1.1","fraction":0.7586805555555556,"solution_number":0},{"haplotype":"KP.2.2","fraction":0.020833333333333332,"solution_number":1},{"haplotype":"KP.2.3","fraction":0.2059895833333333,"solution_number":1},{"haplotype":"KP.3.1.1","fraction":0.7731770833333333,"solution_number":1},{"haplotype":"KP.2.2","fraction":0.0625,"solution_number":2},{"haplotype":"KP.2.3","fraction":0.1953125,"solution_number":2},{"haplotype":"KP.3.1.1","fraction":0.7421875,"solution_number":2},{"haplotype":"KP.2.2","fraction":0.020833333333333332,"solution_number":3},{"haplotype":"KP.2.3","fraction":0.24479166666666663,"solution_number":3},{"haplotype":"KP.3.1.1","fraction":0.734375,"solution_number":3},{"haplotype":"KP.2.2","fraction":0.041666666666666664,"solution_number":4},{"haplotype":"KP.2.3","fraction":0.23958333333333337,"solution_number":4},{"haplotype":"KP.3.1.1","fraction":0.71875,"solution_number":4},{"haplotype":"KP.2.2","fraction":0.0625,"solution_number":5},{"haplotype":"KP.2.3","fraction":0.09765625,"solution_number":5},{"haplotype":"KP.3.1.1","fraction":0.83984375,"solution_number":5},{"haplotype":"KP.2.2","fraction":0.0625,"solution_number":6},{"haplotype":"KP.2.3","fraction":0.234375,"solution_number":6},{"haplotype":"KP.3.1.1","fraction":0.703125,"solution_number":6},{"haplotype":"KP.2.2","fraction":0.041666666666666664,"solution_number":7},{"haplotype":"KP.2.3","fraction":0.0998263888888889,"solution_number":7},{"haplotype":"KP.3.1.1","fraction":0.8585069444444444,"solution_number":7},{"haplotype":"KP.2.2","fraction":0.125,"solution_number":8},{"haplotype":"KP.2.3","fraction":0.09114583333333331,"solution_number":8},{"haplotype":"KP.3.1.1","fraction":0.7838541666666667,"solution_number":8},{"haplotype":"KP.2.2","fraction":0.020833333333333332,"solution_number":9},{"haplotype":"KP.2.3","fraction":0.3059895833333333,"solution_number":9},{"haplotype":"KP.3.1.1","fraction":0.6731770833333334,"solution_number":9}]},"vconcat":[{"data":{"name":"densities"},"mark":{"type":"line","point":true,"tooltip":true},"encoding":{"x":{"field":"solution_number","type":"nominal","axis":{"title":null,"labels":false}},"y":{"field":"density","type":"quantitative","scale":{"type":"log"},"axis":{"title":"log(posterior density)"}},"color":{"value":"black"}}},{"data":{"name":"haplotype_fractions"},"mark":{"type":"bar","tooltip":true},"encoding":{"x":{"field":"solution_number","type":"ordinal","axis":{"title":"composition","labels":false}},"y":{"field":"fraction","type":"quantitative","aggregate":"sum","axis":{"title":"fraction"}},"color":{"field":"haplotype","scale":{"scheme":"category20"}}}}]};
+    const opts = {"renderer":"svg"}
+    vegaEmbed('#vega-chart', spec, opts).catch(console.error);
+}
+
+    </script>
+  </body>
+</html>
+        
