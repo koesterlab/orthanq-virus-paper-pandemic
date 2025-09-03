@@ -2,11 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Redirecting...</title>
+    <title>Datavzrd</title>
 </head>
 <body>
+<script src="./static/bundle.js"></script>
 <script type="text/javascript">
-    window.location.href = "predictions/index_1.html";
+    const urlParams = new URLSearchParams(window.location.search);
+    const viewParam = urlParams.get('view');
+    const version = '2.58.0';
+    const name = 'Lineage similarities';
+    const views = {"similarities":"### Similarity of lineages\nPairwise differences of samples in terms of variants they contain. Every sample contains three virus variants and there are three combinations for each sample. The size and color represent the number of genomic differences. Column names starting with &#x27;Diff_x&#x27; indicate the number of genomic variant differences between each pair of virus variants. Column names starting with &#x27;Shared_x&#x27; indicate the number of shared genomic variants between each pair of virus variants. Tooltips appear when hovering over the bubbles, showing the names of the virus variant pair and the numerical values from the corresponding column.\n"};
+    const table = "similarities";
+    let redirectUrl = viewParam ? `${viewParam}/index_1.html` : `${table}/index_1.html`;
+    urlParams.delete('view');
+    const remainingParams = urlParams.toString();
+    if (remainingParams) redirectUrl += `?${remainingParams}`;
+    if (table || viewParam) {
+        window.location.href = redirectUrl;
+    } else {
+        datavzrd.landing_page();
+    }
 </script>
 </body>
 </html>
